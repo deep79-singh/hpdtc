@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  /* Global Root Variables */
+  --primary: #1E3A8A; /* previously h-blue */
+  --secondary: #064E3B; /* previously h-green */
+  --accent: #F97316; /* previously h-saffron */
+  --background: #F1F5F2;
+  --text: #0F172A; /* previously h-dark */
+
+  /* Legacy variables mapped to new globals for full compatibility */
+  --h-blue: var(--primary);
+  --h-green: var(--secondary);
+  --h-saffron: var(--accent);
+  --h-dark: var(--text);
+
+  /* Bootstrap Variable Overrides */
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--secondary);
+
+  --bs-font-sans-serif: "Montserrat", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-h-blue { color: var(--h-blue); }
+.bg-h-blue { background-color: var(--h-blue); }
+.text-h-saffron { color: var(--h-saffron); }
+.bg-h-saffron { background-color: var(--h-saffron); }
+.text-h-dark { color: var(--h-dark); }
+.bg-h-dark { background-color: var(--h-dark); }
+.text-h-green { color: var(--h-green) !important; }
+
+.btn-h-blue {
+  background-color: var(--h-blue);
+  color: white;
+  border: none;
+}
+.btn-h-blue:hover {
+  background-color: #172a68;
+  color: white;
+}
+.btn-h-saffron {
+  background-color: var(--h-saffron);
+  color: white;
+  border: none;
+}
+.btn-h-saffron:hover {
+  background-color: #d8600d;
+  color: white;
+}
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Hide scrollbar for horizontal scroll areas */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.object-cover { object-fit: cover; }
+.hover-opacity-100:hover { opacity: 1 !important; }
+.hover-opacity-50:hover { opacity: 0.5 !important; }
+.opacity-0 { opacity: 0; }
+.cursor-pointer { cursor: pointer; }
+
+/* Transitions */
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-transform { transition-property: transform; }
+.transition-opacity { transition-property: opacity; }
+.transition-colors { transition-property: color, background-color, border-color; }
+.duration-300 { transition-duration: 300ms; }
+.duration-500 { transition-duration: 500ms; }
+.duration-700 { transition-duration: 700ms; }
+
+/* Hover Effects */
+.group:hover .group-hover-scale { transform: scale(1.1); }
+.group:hover .group-hover-opacity-100 { opacity: 1 !important; }
+.hover-text-h-saffron:hover { color: var(--h-saffron) !important; }
+.hover-text-white:hover { color: white !important; }
+.hover-bg-h-saffron:hover { background-color: var(--h-saffron) !important; color: white !important; }
+
+/* Backdrop Blur */
+.backdrop-blur-sm { backdrop-filter: blur(4px); }
+.backdrop-blur-md { backdrop-filter: blur(12px); }
+
+/* Drop Shadow */
+.drop-shadow-lg { filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); }
+
+/* Pointer Events */
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+
+/* Typography */
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+a {
+  text-decoration: none !important;
+}

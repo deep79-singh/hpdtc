@@ -1,0 +1,5 @@
+{
+  "name": "Himachal Pradesh Tourism",
+  "description": "A visually stunning, mobile-first tourism portal for Himachal Pradesh, featuring interactive itineraries, AI assistance, and premium booking.",
+  "requestFramePermissions": ["geolocation"]
+}
