@@ -275,7 +275,8 @@ export default function Feedback() {
                         whileTap={{ scale: 0.98 }}
                         disabled={isSubmitting}
                         type="submit"
-                        className="group relative w-full py-4 md:py-5 rounded-full overflow-hidden shadow-[0_10px_30px_-10px_rgba(20,184,166,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(20,184,166,0.6)] transition-all duration-500 disabled:opacity-80 disabled:cursor-not-allowed border border-teal-400/30 bg-[#002060]"
+                        style={{ borderRadius: "9999px" }}
+                        className="group relative w-full py-4 md:py-5 rounded-full rounded-pill overflow-hidden shadow-[0_10px_30px_-10px_rgba(20,184,166,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(20,184,166,0.6)] transition-all duration-500 disabled:opacity-80 disabled:cursor-not-allowed border-0 bg-[#002060]"
                       >
                         {/* Animated continuous background gradient */}
                         <motion.div 

@@ -32,6 +32,11 @@ import Awards from "./components/pages/Awards";
 import Feedback from "./components/pages/Feedback";
 import Contacts from "./components/pages/Contacts";
 import Adventure from "./components/pages/Adventure";
+import Conference from "./components/pages/Conference";
+import PrivilegeCard from "./components/pages/PrivilegeCard";
+import PhotographyContest from "./components/pages/PhotographyContest";
+import PhotoGallery from "./components/pages/PhotoGallery";
+import ScreenSaver from "./components/pages/ScreenSaver";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -87,6 +92,11 @@ export default function App() {
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/adventure" element={<Adventure />} />
+        <Route path="/conference" element={<Conference />} />
+        <Route path="/privilege-card" element={<PrivilegeCard />} />
+        <Route path="/photography-contest" element={<PhotographyContest />} />
+        <Route path="/photo-gallery" element={<PhotoGallery />} />
+        <Route path="/screen-saver" element={<ScreenSaver />} />
       </Routes>
 
       <Footer />
