@@ -102,8 +102,7 @@ const NAV_ITEMS = [
         links: [
           { name: "Events", desc: "Festivals and happenings" },
           { name: "Cuisines", desc: "Taste the local flavors" },
-          { name: "Photography Contest", desc: "Showcase your skills" },
-          { name: "Photo Gallery", desc: "Visual journey of HP" },
+          { name: "Adventure", desc: "Thrilling activities to explore" },
         ],
       },
     ],
@@ -146,6 +145,7 @@ const NAV_ITEMS = [
         heading: "Visuals",
         links: [
           { name: "Photo Gallery", desc: "Stunning HD images" },
+          { name: "Photography Contest", desc: "Showcase your skills" },
           { name: "Screen Saver", desc: "Download beautiful wallpapers" },
         ],
       },
@@ -432,7 +432,17 @@ const Navbar = () => {
                                             ? "/huts-cottages"
                                             : link.name === "Hotel Booking"
                                               ? "/hotel-booking"
-                                              : link.name === "Plan Your Visit"
+                                              : link.name === "Events"
+                                                ? "/events"
+                                                : link.name === "Cuisines"
+                                                  ? "/cuisines"
+                                                  : link.name === "Awards"
+                                                    ? "/awards"
+                                                  : link.name === "Feedback"
+                                                    ? "/feedback"
+                                                  : link.name === "Contacts"
+                                                    ? "/contacts"
+                                                  : link.name === "Plan Your Visit"
                                                 ? "/plan-your-trip"
                                                 : link.name ===
                                                     "Tourist Circuits"

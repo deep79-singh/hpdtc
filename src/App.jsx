@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -26,10 +26,26 @@ import Access from "./components/pages/Access";
 import LocalTaxis from "./components/pages/LocalTaxis";
 import Weather from "./components/pages/Weather";
 import BusBooking from "./components/pages/BusBooking";
+import Events from "./components/pages/Events";
+import Cuisines from "./components/pages/Cuisines";
+import Awards from "./components/pages/Awards";
+import Feedback from "./components/pages/Feedback";
+import Contacts from "./components/pages/Contacts";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 export default function App() {
   return (
     <div className="position-relative min-vh-100 bg-white">
+      <ScrollToTop />
       
       <Navbar />
 
@@ -64,6 +80,11 @@ export default function App() {
         <Route path="/local-taxis" element={<LocalTaxis />} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/bus-booking" element={<BusBooking />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/cuisines" element={<Cuisines />} />
+        <Route path="/awards" element={<Awards />} />
+        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
 
       <Footer />
