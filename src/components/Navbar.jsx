@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
   {
@@ -228,6 +228,14 @@ const Navbar = () => {
   // State for Desktop Dropdown
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navRef = React.useRef(null);
+  const location = useLocation();
+
+  // Close menus on route change
+  useEffect(() => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+    setIsSearchOpen(false);
+  }, [location.pathname]);
 
   // Handle clicks outside the navbar to close dropdown
   useEffect(() => {
