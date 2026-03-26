@@ -2,6 +2,8 @@ import React from "react";
 import { motion, MotionConfig } from "motion/react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import HimachalHero from './images/himachal_hero.png';
+
 
 const LAYOUT_SPRING = { type: "spring", stiffness: 200, damping: 28 };
 
@@ -21,7 +23,7 @@ export default function Hero() {
               repeatType: "reverse",
               ease: "linear",
             }}
-            src="/hero-bg.jpg"
+            src={HimachalHero}
             alt="Khajjiar in Winter, Himachal Pradesh"
             className="w-100 h-100 object-cover"
             referrerPolicy="no-referrer"
@@ -59,10 +61,10 @@ export default function Hero() {
             </h1>
 
             <p
-              className="lead text-white-50 mx-auto mb-5 fw-light"
+              className="lead text-white mx-auto mb-5 fw-light"
               style={{ maxWidth: "600px" }}
             >
-              From the snow-capped peaks of Spiti to the lush valleys of Kangra,
+              From the <span className="fw-semibold text-orange-400">snow-capped peaks</span> of Spiti to the <span className="fw-semibold text-orange-400">lush valleys</span> of Kangra,
               discover the untamed beauty of Himachal Pradesh.
             </p>
 
