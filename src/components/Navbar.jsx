@@ -281,7 +281,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 font-sans ${
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-gray-100"
-            : "bg-white/90 backdrop-blur-md shadow-sm py-3"
+            : "bg-white/90 backdrop-blur-md shadow-sm py-2.5"
         }`}
         style={{ color: "#002060" }}
       >
